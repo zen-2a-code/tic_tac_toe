@@ -65,7 +65,7 @@ class Player:
                 return Player.get_user_input(player)
             try:
                 row, column = int(row), int(column)
-                if row > 3 or column > 3:
+                if (row > 3 or column > 3) or (row < 1 or column < 1):
                     print("Please enter numbers between 1 and 3 (inclusive)")
                     return Player.get_user_input(player)
             except ValueError:
